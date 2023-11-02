@@ -26,6 +26,7 @@ public class ClientController {
 	@Autowired
 	ClientService clientService;
 	
+	//je rajoute un truc
 	@PostMapping("/client")
 	public Client createClient(@Validated @RequestBody(required = false) Client client) {
 		return clientService.saveClient(client);
