@@ -48,7 +48,7 @@ public class Commande {
 		super();
 	}
 	
-	
+	//je rajoute un commentaire on s'en fou
 	public Commande(Long id, int quantity, String date, String description, double prix, double prixTotal,
 			Client client, List<DetailsCmde> detailsCmdeList) {
 		super();
