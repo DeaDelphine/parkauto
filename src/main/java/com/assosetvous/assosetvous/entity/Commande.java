@@ -42,8 +42,6 @@ public class Commande {
 	
 	
 	//Constructeurs
-	
-
 	public Commande() {
 		super();
 	}

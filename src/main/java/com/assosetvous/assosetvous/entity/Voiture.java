@@ -1,5 +1,7 @@
 package com.assosetvous.assosetvous.entity;
 
+import java.util.List;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Table;
@@ -21,18 +23,33 @@ public class Voiture extends Vehicule{
 	@Column(name = "POIDSTOTAL")
 	private int poidsTotal;
 
+
+	public Voiture(String media, String immatriculation, String puissanceFiscale, String categorie, int nbPorte,
+			int poidsTotal) {
+		super();
+		this.media = media;
+		this.immatriculation = immatriculation;
+		this.puissanceFiscale = puissanceFiscale;
+		this.categorie = categorie;
+		this.nbPorte = nbPorte;
+		this.poidsTotal = poidsTotal;
+	}
 	public Voiture() {
 		super();	
 	}
 
-	public Voiture(int anneeModel, double prix) {
-		super(anneeModel, prix);	
+	
+	
+	public Voiture(int anneeModel, double prix, List<Location> locationList, List<Agence> agenceList,
+			ModelVehicule modelvehicule) {
+		super(anneeModel, prix, locationList, agenceList, modelvehicule);
+		// TODO Auto-generated constructor stub
 	}
-
-	public Voiture(Long id, int anneeModel, double prix) {
-		super(id, anneeModel, prix);
+	public Voiture(long id, int anneeModel, double prix, List<Location> locationList, List<Agence> agenceList,
+			ModelVehicule modelvehicule) {
+		super(id, anneeModel, prix, locationList, agenceList, modelvehicule);
+		// TODO Auto-generated constructor stub
 	}
-
 	public String getMedia() {
 		return media;
 	}
